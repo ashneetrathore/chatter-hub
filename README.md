@@ -55,18 +55,18 @@ python main.py
 To test the functionality of the app without needing multiple devices, you can simply act as 2 different users on the same device.
 1. After running the application, click `File` in the menu bar.
 2. Select `New` to create a new user profile.
-3. When prompted, enter a username and click `OK`. For this scenario, let's say this profile username is **user1**.
+3. When prompted, enter a username and click `OK`. For this scenario, let's say this profile username is *user1*.
 4. When prompted, enter a password and click `OK`.
 5. Choose a location to create and save a DSU file for this user and click `Save`.
-6. Once the user is created, you should see the message "user1 - Ready" at the bottom left of the application.
-7. To create a second user, open a second terminal, launch the application again, and repeat steps 1-6. Let's say this profile username is **user2**.
+6. Once the user is created, you should see the message *user1 - Ready* at the bottom left of the application.
+7. To create a second user, open a second terminal, launch the application again, and repeat steps 1-6. Let's say this profile username is *user2*.
 
 Next, add the other user as a contact in both users's apps.
 
 8. In user1's app, click `Settings` in the menu bar.
 9. Select `Add Contact`.
-10. When prompted, enter **user2** and click `OK`.
-11. In user2's app, repeat steps 8-10, entering **user1** as a contact.
+10. When prompted, enter *user2* and click `OK`.
+11. In user2's app, repeat steps 8-10, entering *user1* as a contact.
 
 Finally, send messages back and forth between the users.
 
