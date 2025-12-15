@@ -30,7 +30,6 @@ ChatterHub/
 **1. Clone the repository**
 ```bash
 git clone https://github.com/ashneetrathore/ChatterHub.git
-cd ChatterHub/src
 ```
 
 **2. Open ```main.py``` and assign a valid DSU server address to `DSU_SERVER_ADD`**
@@ -48,6 +47,7 @@ DSU_SERVER_PORT = 5000
 ## :rocket: EXECUTION
 Run the application
 ```bash
+cd ChatterHub/src
 python main.py
 ```
 
