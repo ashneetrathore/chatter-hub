@@ -15,7 +15,7 @@ The application follows a client-server architecture implemented in **Python**. 
 
 ## :open_file_folder: PROJECT FILE STRUCTURE
 ```bash
-ChatterHub/
+chatter-hub/
 │── src/
 │   │── main.py              # Starts Tkinter GUI and handles main app logic
 │   │── profile.py           # Manages profile storage and loading
@@ -29,7 +29,7 @@ ChatterHub/
 ## :hammer: CONFIGURATION
 **1. Clone the repository**
 ```bash
-git clone https://github.com/ashneetrathore/ChatterHub.git
+git clone https://github.com/ashneetrathore/chatter-hub.git
 ```
 
 **2. Open ```main.py``` and assign a valid DSU server address to `DSU_SERVER_ADD`**
@@ -47,7 +47,7 @@ DSU_SERVER_PORT = 5000
 ## :rocket: EXECUTION
 Run the application
 ```bash
-cd ChatterHub/src
+cd chatter-hub/src
 python main.py
 ```
 
