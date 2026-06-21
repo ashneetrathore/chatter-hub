@@ -2,28 +2,30 @@
 
 ## :open_book: OVERVIEW
 Date: March 2022\
-Developer(s): Ashneet Rathore, Sachita Jnanesh Rayapati, Roselene Ujagar\
-Based on assignment instructions from Prof. Mark S. Baldwin
+Developer(s): Ashneet Rathore, Sachita Jnanesh Rayapati, Roselene Ujagar
 
-Chatter Hub is a distributed social messenging application that allows users to send and receive messages through a DSU server. Users can create new profiles or load existing ones stored as .dsu files, add contacts, and chat with other users in real time.
+Chatter Hub is a distributed social messenging application for sending and receiving messages through a DSU server. Users can create new profiles or load existing ones, add contacts, and chat with others in real time.
 
 ## :film_strip: DEMO
 ![Demo](demo.gif)
 
 ## :classical_building: ARCHITECTURE
-The application follows a client-server architecture implemented in **Python**. The frontend, built with **Tkinter**, provides an interactive GUI for composing, sending, and receiving messages. The backend uses **socket programming** to reliably send and receive messages over a TCP connection to the DSU server. All outgoing messages are encoded in **JSON** format before being sent.
+The application follows a client-server architecture implemented in **Python**. The frontend, built with **Tkinter**, provides an interactive GUI for composing, sending, and receiving messages. User profiles are stored locally as `.dsu` files and can be created or loaded at startup. The backend uses **socket programming** to communicate with the DSU server over TCP. following a. **JSON-based messaging protocol**.
+
+## :classical_building: ARCHITECTURE
+The application follows a **client-server architecture** implemented in **Python**. The frontend, built with **Tkinter**, provides an interactive GUI for composing, sending, and receiving messages. User profiles are stored locally as `.dsu` files and can be created or loaded at startup. The backend uses **socket programming** to communicate with the DSU server over TCP, following a **JSON-based messaging protocol**.
 
 ## :open_file_folder: PROJECT FILE STRUCTURE
 ```bash
 chatter-hub/
 │── src/
-│   │── main.py              # Starts Tkinter GUI and handles main app logic
-│   │── profile.py           # Manages profile storage and loading
-│   │── ds_messenger.py      # Handles messaging logic
-│   └── ds_protocol.py       # Handles messaging protocol with JSON encoding and decoding
+│   │── main.py              # Tkinter GUI and main app logic
+│   │── profile.py           # Profile storage and loading logic
+│   │── ds_messenger.py      # Messaging logic
+│   └── ds_protocol.py       # Messaging protocol with JSON encoding and decoding
 │── README.md                # Project documentation
-│── .gitignore               # Excludes files and folders from version control
-└── demo.gif                 # GIF showing the message sending demo
+│── .gitignore               # Ignored files
+└── demo.gif                 # Demo GIF
 ```
 
 ## :hammer: CONFIGURATION
@@ -32,45 +34,40 @@ chatter-hub/
 git clone https://github.com/ashneetrathore/chatter-hub.git
 ```
 
-**2. Open ```main.py``` and assign a valid DSU server address to `DSU_SERVER_ADD`**
+**2. Assign a valid DSU server address to `DSU_SERVER_ADD` in ```main.py```**
 ```python
 # Example assignment
 DSU_SERVER_ADD = "127.0.0.1"
 ```
 
-**3. Open ```ds_messenger.py``` and assign a valid DSU server port to `DSU_SERVER_PORT`**
+**3. Assign a valid DSU server port to `DSU_SERVER_PORT` in ```ds_messenger.py```**
 ```python
 # Example assignment
 DSU_SERVER_PORT = 5000
 ```
 
 ## :rocket: EXECUTION
-Run the application
 ```bash
 cd chatter-hub/src
 python main.py
 ```
 
 ## :wrench: TRY IT OUT
-To test the functionality of the app without needing multiple devices, you can simply act as 2 different users on the same device.
-1. After running the application, click `File` in the menu bar.
-2. Select `New` to create a new user profile.
-3. When prompted, enter a username and click `OK`. For this scenario, let's say this profile username is *user1*.
-4. When prompted, enter a password and click `OK`.
-5. Choose a location to create and save a DSU file for this user and click `Save`.
-6. Once the user is created, you should see the message *user1 - Ready* at the bottom left of the application.
-7. To create a second user, open a second terminal, launch the application again, and repeat steps 1-6. Let's say this profile username is *user2*.
+To test without multiple devices, run two instances of the app on the same machine - one for each user.
 
-Next, add the other user as a contact in both users's apps.
+**Set up two profiles**
+1. Click `File` in the menu bar and select `New`.
+2. Enter a username (e.g. *user1*) and password when prompted.
+3. Choose a location to save the `.dsu` file.
+4. Open a second terminal, launch the app again, and repeat steps 1-3 with a different username (e.g. *user2*).
 
-8. In user1's app, click `Settings` in the menu bar.
-9. Select `Add Contact`.
-10. When prompted, enter *user2* and click `OK`.
-11. In user2's app, repeat steps 8-10, entering *user1* as a contact.
+**Add each other as contacts**
 
-Finally, send messages back and forth between the users.
+5. In user1's app, click `Settings` in the menu bar, select `Add Contact`, and enter *user2*.
+6. In user2's app, repeat with *user1*.
 
-12. In user1's app, select `user2` in the contact list. The selected contact should be highlighted in blue. Repeat the same step in user2's app, selecting `user1` as a contact.
-13. Type a message in user1's app and click `Send`.
-14. In user2's app, the message should appear. There may be a short delay.
-15. Repeat this process in user2's app to send a message back to user1.
+**Send messages**
+
+7. In both apps, select the other user from the contact list.
+8. Type a message in user1's app and click `Send`. It should appear in user2's app after a short delay.
+9. Repeat from user2's app to send a message back.
