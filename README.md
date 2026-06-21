@@ -10,9 +10,6 @@ Chatter Hub is a distributed social messenging application for sending and recei
 ![Demo](demo.gif)
 
 ## :classical_building: ARCHITECTURE
-The application follows a client-server architecture implemented in **Python**. The frontend, built with **Tkinter**, provides an interactive GUI for composing, sending, and receiving messages. User profiles are stored locally as `.dsu` files and can be created or loaded at startup. The backend uses **socket programming** to communicate with the DSU server over TCP. following a. **JSON-based messaging protocol**.
-
-## :classical_building: ARCHITECTURE
 The application follows a **client-server architecture** implemented in **Python**. The frontend, built with **Tkinter**, provides an interactive GUI for composing, sending, and receiving messages. User profiles are stored locally as `.dsu` files and can be created or loaded at startup. The backend uses **socket programming** to communicate with the DSU server over TCP, following a **JSON-based messaging protocol**.
 
 ## :open_file_folder: PROJECT FILE STRUCTURE
